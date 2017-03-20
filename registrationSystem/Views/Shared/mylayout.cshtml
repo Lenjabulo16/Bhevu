@@ -1,0 +1,439 @@
+﻿
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>@Page.Title</title>
+        @RenderSection("head", required: false)
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device+width, maximum-scale=0">
+        <title>Homepage</title>
+        <link rel="icon" href="favicon.png" type="image/png">
+        <link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
+        <link href="~/Content/css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="~/Content/css/style.css" rel="stylesheet" type="text/css">
+        <link href="~/Content/css/font-awesome.css" rel="stylesheet" type="text/css">
+        <link href="~/Content/css/responsive.css" rel="stylesheet" type="text/css">
+        <link href="~/Content/css/animate.css" rel="stylesheet" type="text/css">
+        <!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
+        <script type="text/javascript" src="~/Content/js/jquery.1.8.3.min.js"></script>
+        <script type="text/javascript" src="~/Content/js/bootstrap.js"></script>
+        <script type="text/javascript" src="~/Content/js/jquery-scrolltofixed.js"></script>
+        <script type="text/javascript" src="~/Content/js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="~/Content/js/jquery.isotope.js"></script>
+        <script type="text/javascript" src="~/Content/js/wow.js"></script>
+        <script type="text/javascript" src="~/Content/js/classie.js"></script>
+        @*<script src="~/Content/contactform/"></script*@
+        <style>
+            body{
+                background-color:lightblue;              
+                background-size:auto;
+                background-position:top
+            }
+            h1{
+                color:black;
+                text-align:center;
+            }
+            p{
+                font-family:'Times New Roman';
+                font-size:20px;
+            }
+            li{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-size:20px;
+                color:black;
+            }
+            a{
+                 font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-size:medium;
+                color:black;
+            }
+            img{
+                width:200px;
+                position:center;
+                transition-property:all;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="main-nav-outer" id="test" >
+            <!--main-nav-start-->
+            <div class="container">            
+                    <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "User" }, Request.Url.Scheme)"></a>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="~/Views/Account/Register.cshtml">Submit Application</a></li>
+                    <li><a href="~/Views/Home/About.cshtml">About</a></li>
+                    <li><a href="~/Views/Home/Contact.cshtml">Contact</a></li>
+                    <li><a href="~/Views/Account/Login.cshtml">Login</a></li>
+                </ul>
+                <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
+            </div>
+        </nav><!--main-nav-end-->     
+        <header class="header" id="header">
+            <!--header-start-->
+            <div class="container">
+                <a class="link animated fadeInUp delay-1s glyphicon-registration-mark" href="@Url.Action("Register", null, new { area = string.Empty, controller = "User" }, Request.Url.Scheme)">Apply Here</a>
+                <figure class="logo animated fadeInDown delay-07s">
+                    <a href="#"><img src="~/Content/img/Bhevu Logo.jpg" alt="" width="300"></a>
+                </figure>
+                <h1 class="animated fadeInDown delay-07s">Welcome To Bhevu High School</h1>
+                <ul class="we-create animated fadeInUp delay-1s">
+                    <li>We aspire to inspire.</li>
+                </ul>
+            </div>
+        </header><!--header-end-->
+
+        <section class="main-section" id="service">
+            <!--main-section-start-->
+            <div class="container">
+                <h2>Application Form</h2>
+                <h6>Complet the Form below.</h6>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
+                        <div class="service-list">
+                            <div class="service-list-col1">
+                                <i class="fa-paw"></i>
+                            </div>
+                            <div class="service-list-col2">
+                                <h3>branding &amp; identity</h3>
+                                <p>Proin iaculis purus digni consequat sem digni ssim. Donec entum digni ssim.</p>
+                            </div>
+                        </div>
+                        <div class="service-list">
+                            <div class="service-list-col1">
+                                <i class="fa-gear"></i>
+                            </div>
+                            <div class="service-list-col2">
+                                <h3>School Development</h3>
+                                <p>Proin iaculis purus consequat sem digni ssim. Digni ssim porttitora .</p>
+                            </div>
+                        </div>
+                        <div class="service-list">
+                            <div class="service-list-col1">
+                                <i class="fa-apple"></i>
+                            </div>
+                            <div class="service-list-col2">
+                                <h3>mobile design</h3>
+                                <p>Proin iaculis purus consequat digni sem digni ssim. Purus donec porttitora entum.</p>
+                            </div>
+                        </div>
+                        <div class="service-list">
+                            <div class="service-list-col1">
+                                <i class="fa-medkit"></i>
+                            </div>
+                            <div class="service-list-col2">
+                                <h3>24/7 Support</h3>
+                                <p>Proin iaculis purus consequat sem digni ssim. Sem porttitora entum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
+                        <img src="~/Content/img/DSCN3608.JPG" alt="logo" />
+                    </figure>
+
+                </div>
+            </div>
+        </section><!--main-section-end-->
+
+
+
+        <section class="main-section alabaster">
+            <!--main-section alabaster-start-->
+            <div class="container">
+                <div class="row">
+                    <figure class="col-lg-5 col-sm-4 wow fadeInLeft">
+                        <img src="~/Content/img/DSCN3371.JPG" alt="">
+                    </figure>
+                    <div class="col-lg-7 col-sm-8 featured-work">
+                        <h2>featured work</h2>
+                        <P class="padding-b">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.</P>
+                        <div class="featured-box">
+                            <div class="featured-box-col1 wow fadeInRight delay-02s">
+                                <i class="fa-magic"></i>
+                            </div>
+                            <div class="featured-box-col2 wow fadeInRight delay-02s">
+                                <h3>magic of theme development</h3>
+                                <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. </p>
+                            </div>
+                        </div>
+                        <div class="featured-box">
+                            <div class="featured-box-col1 wow fadeInRight delay-04s">
+                                <i class="fa-gift"></i>
+                            </div>
+                            <div class="featured-box-col2 wow fadeInRight delay-04s">
+                                <h3>neatly packaged</h3>
+                                <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. </p>
+                            </div>
+                        </div>
+                        <div class="featured-box">
+                            <div class="featured-box-col1 wow fadeInRight delay-06s">
+                                <i class="fa-dashboard"></i>
+                            </div>+++++
+                            <div class="featured-box-col2 wow fadeInRight delay-06s">
+                                <h3>SEO optimized</h3>
+                                <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. </p>
+                            </div>
+                        </div>
+                        <a class="Learn-More" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section><!--main-section alabaster-end-->
+
+
+
+        <section class="main-section paddind" id="Portfolio">
+            <!--main-section-start-->
+            <div class="container">
+                <h2>BH School</h2>
+                <h6>Fresh portfolio of designs that will keep you wanting more.</h6>
+                <div class="portfolioFilter">
+                    <ul class="Portfolio-nav wow fadeIn delay-02s">
+                        <li><a href="#" data-filter="*" class="Foto Album">All</a></li>
+                        <li><a href="#" data-filter=".branding">Branding</a></li>
+                        <li><a href="#" data-filter=".webdesign">sports and recreation</a></li>
+                        <li><a href="#" data-filter=".printdesign">Awards</a></li>
+                        <li><a href="#" data-filter=".photography">Arts and Culture</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="portfolioContainer wow fadeInUp delay-04s">
+                <div class=" Portfolio-box printdesign">
+                    <a href="#"><img src="~/Content/img/DSCN3553.JPG" alt=""></a>
+                    <h3>Foto Album</h3>
+                    <p>sports and recreation</p>
+                </div>
+                <div class="Portfolio-box webdesign">
+                    <a href="#"><img src="~/Content/img/DSCN3554.JPG" alt=""></a>
+                    <h3>Awards</h3>
+                    <p>the one's that got the highest mark</p>
+                </div>
+                <div class=" Portfolio-box branding">
+                    <a href="#"><img src="~/Content/img/DSCN3534.JPG" alt=""></a>
+                    <h3>Arts and Culture</h3>
+                    <p>The student who participate on the acting industries and those who had skills in writing books
+                    are awarded with presents</p>
+                </div>
+                <div class=" Portfolio-box photography">
+                    <a href="#"><img src="~/Content/img/DSCN3519.JPG" alt=""></a>
+                    <h3>other photos</h3>
+                    <p>BHS Girls</p>
+                </div>
+                <div class=" Portfolio-box branding">
+                    <a href="#"><img src="~/Content/img/DSCN3375.JPG" alt=""></a>
+                    <h3>working for future</h3>
+                    <p>students</p>
+                </div>
+                <div class=" Portfolio-box photography">
+                    <a href="#"><img src="~/Content/img/DSCN3372.JPG" alt=""></a>
+                    <h3>special thanks to the principal</h3>
+                    <p>building the school of Bhevu</p>
+                </div>
+            </div>
+        </section><!--main-section-end-->
+
+
+        <section class="main-section client-part" id="client">
+            <!--main-section client-part-start-->
+            <div class="container">
+                <b class="quote-right wow fadeInDown delay-03"><i class="fa-quote-right"></i></b>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="client-part-haead wow fadeInDown delay-05">
+                            It was a pleasure to work with the students at Bhevu High School. They made sure
+                            they are well fed all the time!
+                        </p>
+                    </div>
+                </div>
+                <ul class="client wow fadeIn delay-05s">
+                    <li>
+                        <a href="#">
+                            <img src="~/Content/img/Bhevu Logo.jpg" alt=""width="20">
+                            <h3>Bhevu High School Registration system</h3>
+                            <span>License To C#Solutions.</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section><!--main-section client-part-end-->
+        <div class="c-logo-part">
+            <!--c-logo-part-start-->
+            <div class="container">
+                <ul>
+                    <li><a href="#"><img src="~/Content/img/DSCN3669.JPG" alt=""></a></li>
+                    <li><a href="#"><img src="~/Content/img/DSCN3548.JPG" alt=""></a></li>
+                    <li><a href="#"><img src="~/Content/img/DSCN3519.JPG" alt=""></a></li>
+                    <li><a href="#"><img src="~/Content/img/DSCN3517.JPG" alt=""></a></li>
+                    <li><a href="#"><img src="~/Content/img/DSCN3516.JPG" alt=""></a></li>
+                </ul>
+            </div>
+        </div><!--c-logo-part-end-->
+        <section class="main-section team" id="team">
+            <!--main-section team-start-->
+            <div class="container">
+                <h2>BH School</h2>
+                <h6>Take a closer look into our amazing School. We won’t bite.</h6>
+                <div class="team-leader-block clearfix">
+                    <div class="team-leader-box">
+                        <div class="team-leader wow fadeInDown delay-03s">
+                            <div class="team-leader-shadow"><a href="#"></a></div>
+                            <img src="~/Content/img/DSCN3375.JPG" alt="">
+                            <ul>
+                                <li><a href="#" class="fa-twitter"></a></li>
+                                <li><a href="#" class="fa-facebook"></a></li>
+                                <li><a href="#" class="fa-pinterest"></a></li>
+                                <li><a href="#" class="fa-google-plus"></a></li>
+                            </ul>
+                        </div>
+                        <h3 class="wow fadeInDown delay-03s">Walter White</h3>
+                        <span class="wow fadeInDown delay-03s">Chief Executive Officer</span>
+                        <p class="wow fadeInDown delay-03s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
+                    </div>
+                    <div class="team-leader-box">
+                        <div class="team-leader  wow fadeInDown delay-06s">
+                            <div class="team-leader-shadow"><a href="#"></a></div>
+                            <img src="img/team-leader-pic2.jpg" alt="">
+                            <ul>
+                                <li><a href="#" class="fa-twitter"></a></li>
+                                <li><a href="#" class="fa-facebook"></a></li>
+                                <li><a href="#" class="fa-pinterest"></a></li>
+                                <li><a href="#" class="fa-google-plus"></a></li>
+                            </ul>
+                        </div>
+                        <h3 class="wow fadeInDown delay-06s">Jesse Pinkman</h3>
+                        <span class="wow fadeInDown delay-06s">Product Manager</span>
+                        <p class="wow fadeInDown delay-06s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
+                    </div>
+                    <div class="team-leader-box">
+                        <div class="team-leader wow fadeInDown delay-09s">
+                            <div class="team-leader-shadow"><a href="#"></a></div>
+                            <img src="img/team-leader-pic3.jpg" alt="">
+                            <ul>
+                                <li><a href="#" class="fa-twitter"></a></li>
+                                <li><a href="#" class="fa-facebook"></a></li>
+                                <li><a href="#" class="fa-pinterest"></a></li>
+                                <li><a href="#" class="fa-google-plus"></a></li>
+                            </ul>
+                        </div>
+                        <h3 class="wow fadeInDown delay-09s">Skyler white</h3>
+                        <span class="wow fadeInDown delay-09s">Accountant</span>
+                        <p class="wow fadeInDown delay-09s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
+                    </div>
+                </div>
+            </div>
+        </section><!--main-section team-end-->
+
+      
+        @*<footer class="footer">
+            <div class="container">
+                <div class="footer-logo"><a href="#"><img src="~/Content/img/DSCN3517.JPG" alt=""></a></div>
+                <span class="copyright">&copy;. All Rights Reserved</span>
+                <div class="credits">
+                    
+                    All the links in the footer should remain intact.
+                    You can delete the links only if you purchased the pro version.
+                    Licensing information: https://bootstrapmade.com/license/
+                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Knight
+                
+                    <a href="~/Views/Home/About.cshtml">About Bhevu High School</a> by <a href="~/Views/Home/Contact.cshtml">About</a>
+                </div>
+            </div>
+        </footer>*@
+
+
+        <script type="text/javascript">
+    $(document).ready(function(e) {
+        $('#test').scrollToFixed();
+        $('.res-nav_click').click(function(){
+            $('.main-nav').slideToggle();
+            return false
+
+        });
+
+    });
+        </script>
+
+        <script>
+    wow = new WOW(
+      {
+          animateClass:'Animated',
+        offset:       100
+      }
+
+    );
+    wow.init();
+        </script>
+
+
+        <script type="text/javascript">
+	$(window).load(function(){
+
+		$('.main-nav li a, .servicelink').bind('click',function(event){
+			var $anchor = $(this);
+
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top - 102
+			}, 1500,'easeInOutExpo');
+			/*
+			if you don't want to use the easing effects:
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+			}, 1000);
+			*/
+			event.preventDefault();
+		});
+	})
+        </script>
+
+        <script type="text/javascript">
+
+$(window).load(function(){
+
+
+  var $container = $('.portfolioContainer'),
+      $body = $('body'),
+      colW = 375,
+      columns = null;
+
+
+  $container.isotope({
+    // disable window resizing
+    resizable: true,
+    masonry: {
+      columnWidth: colW
+    }
+  });
+
+  $(window).smartresize(function(){
+    // check if columns has changed
+    var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
+    if ( currentColumns !== columns ) {
+      // set new column count
+      columns = currentColumns;
+      // apply width to container manually, then trigger relayout
+      $container.width( columns * colW )
+        .isotope('reLayout');
+    }
+
+  }).smartresize(); // trigger resize to set container width
+  $('.portfolioFilter a').click(function(){
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+
+            filter: selector,
+         });
+         return false;
+    });
+
+});
+
+        </script>
+        @RenderBody()
+    </body>
+</html>
